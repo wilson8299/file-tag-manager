@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="BarDark">#202225</Color>
+    <SolidColorBrush x:Key="BarDarkBrush" Color="{StaticResource BarDark}" />
+
+    <Color x:Key="ExplorerBarDark">#2F3136</Color>
+    <SolidColorBrush x:Key="ExplorerBarDarkBrush" Color="{StaticResource ExplorerBarDark}" />
+
+    <Color x:Key="ContentDark">#86888C</Color>
+    <SolidColorBrush x:Key="ContentDarkBrush" Color="{StaticResource ContentDark}" />
+
+    <Color x:Key="ContentBgDark">#36393F</Color>
+    <SolidColorBrush x:Key="ContentBgDarkBrush" Color="{StaticResource ContentBgDark}" />
+
+    <Color x:Key="ChipBlue">#1976D2</Color>
+    <SolidColorBrush x:Key="ChipBlueBrush" Color="{StaticResource ChipBlue}" />
+
+    <Color x:Key="CloseRed">#D82A26</Color>
+    <SolidColorBrush x:Key="CloseRedBrush" Color="{StaticResource CloseRed}" />
+
+    <Color x:Key="SeparateLineGray">#5A5C61</Color>
+    <SolidColorBrush x:Key="SeparateLineGrayBrush" Color="{StaticResource SeparateLineGray}" />
+
+    <Color x:Key="HoverWitheD3">#33FFFFFF</Color>
+    <SolidColorBrush x:Key="HoverWitheD3Brush" Color="{StaticResource HoverWitheD3}" />
+
+    <SolidColorBrush x:Key="PrimaryHueLightBrushD5"
+                     Opacity="0.5"
+                     Color="{StaticResource Primary200}" />
+
+</ResourceDictionary>

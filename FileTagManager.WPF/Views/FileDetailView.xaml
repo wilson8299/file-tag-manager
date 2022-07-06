@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="FileTagManager.WPF.Views.FileDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:cvt="clr-namespace:FileTagManager.WPF.Converters"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+
+    <Grid>
+        <DockPanel Margin="10"
+                   Background="{StaticResource ExplorerBarDarkBrush}"
+                   ScrollViewer.VerticalScrollBarVisibility="Visible"
+                   Visibility="{Binding IsSelected, Converter={cvt:BoolToVisibilityConverter}}">
+            <DockPanel DockPanel.Dock="Top">
+                <TextBlock DockPanel.Dock="Left"
+                           FontSize="{StaticResource FontSizeLarge}"
+                           Foreground="{StaticResource MaterialDesignDarkForeground}"
+                           Text="Info" />
+                <Rectangle Height="1"
+                           Margin="10,10,0,0"
+                           HorizontalAlignment="Stretch"
+                           DockPanel.Dock="Right"
+                           Fill="{StaticResource SeparateLineGrayBrush}" />
+            </DockPanel>
+            <Viewbox Margin="20"
+                     VerticalAlignment="Center"
+                     DockPanel.Dock="Top">
+                <materialDesign:PackIcon HorizontalAlignment="Center"
+                                         Foreground="{StaticResource ContentDarkBrush}"
+                                         Kind="FileHidden" />
+            </Viewbox>
+            <TextBlock Padding="0,6"
+                       HorizontalAlignment="Center"
+                       DockPanel.Dock="Top"
+                       FontSize="{StaticResource FontSizeXLarge}"
+                       Foreground="{StaticResource MaterialDesignDarkForeground}"
+                       Text="No File Selected" />
+            <TextBlock HorizontalAlignment="Center"
+                       DockPanel.Dock="Top"
+                       Foreground="{StaticResource ContentDarkBrush}"
+                       Text="When you selecte one of the file, you'll be able to see the details."
+                       TextWrapping="Wrap" />
+        </DockPanel>
+        <DockPanel Margin="10,10,2,10"
+                   Background="{StaticResource ExplorerBarDarkBrush}"
+                   Visibility="{Binding IsSelected, Converter={cvt:BoolToVisibilityConverter}, ConverterParameter=True}">
+            <DockPanel Margin="0,0,8,10" DockPanel.Dock="Top">
+                <TextBlock DockPanel.Dock="Left"
+                           FontSize="{StaticResource FontSizeXLarge}"
+                           Foreground="{StaticResource MaterialDesignDarkForeground}"
+                           Text="Info" />
+                <Rectangle Height="1"
+                           Margin="10,10,0,0"
+                           HorizontalAlignment="Stretch"
+                           DockPanel.Dock="Right"
+                           Fill="{StaticResource SeparateLineGrayBrush}" />
+            </DockPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <DockPanel>
+                    <Image Height="230"
+                           DockPanel.Dock="Top"
+                           Source="{Binding SelectedFile.Thumbnail}" />
+                    <UniformGrid Columns="2" DockPanel.Dock="Top">
+                        <Button Margin="5"
+                                Command="{Binding ChangeThumbnailAsyncCommand}"
+                                Content="Change"
+                                FontSize="{StaticResource FontSizeXLarge}"
+                                Style="{StaticResource MaterialDesignFlatMidBgButton}">
+                        </Button>
+                        <Button Margin="5"
+                                Command="{Binding DefaultThumbnailAsyncCommand}"
+                                Content="Default"
+                                Style="{StaticResource MaterialDesignFlatMidBgButton}">
+                        </Button>
+                    </UniformGrid>
+                    <StackPanel Margin="5,5,0,0" DockPanel.Dock="Top">
+                        <TextBlock Padding="0,3"
+                                   FontSize="{StaticResource FontSizeLarge}"
+                                   Foreground="{StaticResource MaterialDesignDarkForeground}"
+                                   TextWrapping="Wrap">
+                            <Run Foreground="{StaticResource PrimaryHueLightBrush}" Text="Name : " />
+                            <Run Text="{Binding SelectedFile.Name}" />
+                        </TextBlock>
+                        <TextBlock Padding="0,3"
+                                   FontSize="{StaticResource FontSizeLarge}"
+                                   Foreground="{StaticResource MaterialDesignDarkForeground}"
+                                   TextWrapping="Wrap">
+                            <Run Foreground="{StaticResource PrimaryHueLightBrush}" Text="Path : " />
+                            <Run Text="{Binding SelectedFile.Path}" />
+                        </TextBlock>
+                        <TextBlock Padding="0,3"
+                                   FontSize="{StaticResource FontSizeLarge}"
+                                   Foreground="{StaticResource MaterialDesignDarkForeground}"
+                                   TextWrapping="Wrap">
+                            <Run Foreground="{StaticResource PrimaryHueLightBrush}" Text="Extension : " />
+                            <Run Text="{Binding SelectedFile.Extension}" />
+                        </TextBlock>
+                        <TextBlock Padding="0,3"
+                                   FontSize="{StaticResource FontSizeLarge}"
+                                   Foreground="{StaticResource PrimaryHueLightBrush}"
+                                   Text="Tag : "
+                                   TextWrapping="Wrap" />
+                    </StackPanel>
+                    <Grid Margin="0,5,0,0" DockPanel.Dock="Bottom">
+                        <TextBox x:Name="TagTextBox"
+                                 Padding="5,0,35,0"
+                                 materialDesign:HintAssist.Hint="Comment"
+                                 Text="{Binding AddTagText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                            <TextBox.InputBindings>
+                                <KeyBinding Key="Return" Command="{Binding AddTagAsyncCommand}" />
+                            </TextBox.InputBindings>
+                        </TextBox>
+                        <TextBlock Padding="5,0,35,0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   Foreground="DarkGray"
+                                   IsHitTestVisible="False"
+                                   Text="Add Tag"
+                                   TextTrimming="CharacterEllipsis">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=TagTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <Button Width="35"
+                                Padding="0"
+                                HorizontalAlignment="Right"
+                                Command="{Binding AddTagAsyncCommand}"
+                                Style="{StaticResource MaterialDesignFlatLightButton}">
+                            <materialDesign:PackIcon Kind="ArrowLeftBottom" />
+                        </Button>
+                    </Grid>
+                    <ItemsControl Margin="0,6,0,0"
+                                  DockPanel.Dock="Top"
+                                  ItemsSource="{Binding TagDto}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <materialDesign:Chip Margin="4"
+                                                     Background="{StaticResource PrimaryHueDarkBrush}"
+                                                     Content="{Binding Name}"
+                                                     DeleteButtonForeground="{StaticResource PrimaryHueLightBrush}"
+                                                     DeleteCommand="{Binding Path=DataContext.DeleteTagAsyncCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                                     DeleteCommandParameter="{Binding}"
+                                                     Foreground="{StaticResource MaterialDesignDarkForeground}"
+                                                     IsDeletable="True" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </DockPanel>
+            </ScrollViewer>
+
+        </DockPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,57 @@
+﻿<Application x:Class="FileTagManager.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FileTagManager.WPF"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:v="clr-namespace:FileTagManager.WPF.Views"
+             xmlns:vm="clr-namespace:FileTagManager.WPF.ViewModels">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesign:BundledTheme BaseTheme="Dark"
+                                             PrimaryColor="Blue"
+                                             SecondaryColor="Blue" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="Styles/FontStyle.xaml" />
+                <ResourceDictionary Source="Styles/ColorStyle.xaml" />
+                <ResourceDictionary Source="Styles/ButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/TextBoxStyle.xaml" />
+                <ResourceDictionary Source="Styles/ScrollStyle.xaml" />
+                <ResourceDictionary Source="Styles/ListBoxStyle.xaml" />
+                <ResourceDictionary Source="Styles/RadioButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type vm:InitDirViewModel}">
+                <v:InitDirView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+                <v:HomeView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:MainViewModel}">
+                <v:MainView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:FileListViewModel}">
+                <v:FileListView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:SearchViewModel}">
+                <v:SearchView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:SideBarViewModel}">
+                <v:SideBarView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:FileDetailViewModel}">
+                <v:FileDetailView />
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>
