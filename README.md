@@ -34,9 +34,10 @@ File Tag Manager 是 Windows 上的標籤管理程式，為檔案添加標籤後
 - [Autofac](https://autofac.org/) 
 - [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
 - [Sqlite](https://www.sqlite.org/index.html) 
-- [Dapper](https://github.com/DapperLib/Dapper) 
+- [Dapper](https://github.com/DapperLib/Dapper)
+- [NLog](https://github.com/NLog/NLog)
 - [Nunit](https://github.com/nunit/nunit)
-- [moq](https://github.com/moq/moq)
+- [Moq](https://github.com/moq/moq)
 
 
 
@@ -50,15 +51,15 @@ Download win-x64：[![](https://img.shields.io/badge/Release-v1.0.0.0-blue.svg?s
 
 ```
 File Tree
-├── FileTagManager.Database/		# 資料庫相關
+├── FileTagManager.Database/        # 資料庫相關
 │ ├── Data/
 │ ├── Repositories/
 │ └── UoW/				
-├── FileTagManager.Domain/			# 可共用檔案
+├── FileTagManager.Domain/          # 可共用檔案
 │ ├── Interfaces/
 │ └── Models/	
-├── FileTagManager.Test/			# 測試
-├── FileTagManager.WPF/				# WPF 
+├── FileTagManager.Test/            # 測試
+├── FileTagManager.WPF/             # WPF 
 │ ├── Assets/
 │ ├── AttachedProperties/
 │ ├── Dll/
