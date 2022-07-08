@@ -9,9 +9,8 @@ File Tag Manager 是 Windows 上的標籤管理程式，為檔案添加標籤後
 > 測試使用 NUnit 和 moq mock 框架。
 
 <p align="center" width="100%">
-    <img src="https://uc7d814336e36b7d3ba129424a22.previews.dropboxusercontent.com/p/thumb/ABncgnqFJMbxyLCWSrr2CcfTt91y7l0kZZhVAd9RGwcxYIYhOpaHptdYY5_E4_5Y6xm170upqmF8G0uJdcvXSIc99eH2L1wHEtyRq4CuIXZXpV6jVJt5SIA0Tgg7P3iznXMYCBXHrIMCNWj8p9zXKDrO05xd3xowQc36sdkYn4PP5NahUbgfmNcposM1dfAIVxIKoZfF9BvdBFp0V2_Kr0rW9_Qv9fJKUzgk8a71uM4OmsQtCqJUEQLfq9xWvJ0QgXdECuMpVWORs794-cPIj01m7pnRe2Ngy-hyALgTvy7ek6bzcEATz_Azs0GyzQTgJi0BHEeFWkIOujP4FsiLhiV9YQbizi7Iypoty6nU0C9gdNBTMbU8A6yhNz4It7uZPiln-pyvD1NExzFXdTf1vlW1uOQZj7yfn_1tjesgoPIs9Q/p.gif" alt="file-tag-manager-c" width="85%"/>
+    <img src="https://imgur.com/1KMI1h3.gif" alt="file-tag-manager-c" width="85%"/>
 </p>
-
 
 
 ## Table of contents
@@ -78,7 +77,7 @@ File Tree
 選擇目標文件夾。
 
 <p align="center" width="100%">
-    <img src="https://uc44b53fce9ca555c2fe5d468419.previews.dropboxusercontent.com/p/thumb/ABnxPi2lsHu8LffuqwYBQ6YvjBBG5_08mAkA94OhN4u97QKikjdJNMlvYYrmXDVWogE4_D40uHC2bEKarXNg8ykWtTe0-1At9f2O6sKlY_1Nafph7aeKQEALibt11Yc7KxXhk-My2cmAjq0_fCP_mbyu1ClWr460wc1EyCL850wF3dPikZUAA9Bp3-tyrs6cUKWNPqc1fnh0dHz2alHVkT8CRXeKBQaExMCvA1y8K833MjQFmkQjtXkZr1803ihB__9JldDGdNNxdOYHe04rlHzrVxNjH7QF-0xVcnpzUMhyP8KVlDjL2QGP09AZqz8Va9RgdGGJap0RFnvDO-sLvHMRyJYFSgHT1s2JDBqeHZy7JoZ3vT4NAG2SfxlJbGOJzrqDBJvroYL2U6FK6n4J9jnzIJP6uWdJ1QwsBZmUBHrESg/p.png" alt="select-directory" width="85%"/>
+    <img src="https://imgur.com/jAztUaQ.png" alt="select-directory" width="85%"/>
 </p>
 
 
@@ -93,7 +92,7 @@ Info：檔案的資訊，包括更改縮略圖及添加標籤。可以透過逗�
 > 當有新增或刪除檔案的時候，可以點擊 Explorer 和 List 上的重整按鈕，程式會自動添加或刪除變更的檔案。
 
 <p align="center" width="100%">
-    <img src="https://uc3cdc642aa478069aa10caa3157.previews.dropboxusercontent.com/p/thumb/ABmOf0QhJONESD_euOkWFiUunIuV7knO8M2KsBmn1f0AQCFs7d-a7jZtFzppYq08Rw9H9o8PIIAy-ehsYYEy4loawmLdqLT69XpxwEXjTLYPd14Uxt158JFcmy3SCjHl4LYrNIwl-toCsqPj3qP1tCynmmQ3269oNh2bSYvcq3mr81dsowLZlN6Sk9its87-kWzoCQWQh273im6tLeFSOSLglrr7LjpnyTvILKTPHtVjp6XKwgCN-ue8DauKNbCnNp1l15jFs-zBT1KNJIFUTueKFQfVfb3WYlyCgjYogci648N12EVLOzj04iZ0mj0JkTqD9-sgLP5_5SI5j1L79BWmbpjYrYEqauGRMTrDkhuA1N5CbDigZ7ttxNnQWB3WooOxZFQt2Gxx2GVIzi1Y3-EZOT3FExHgwucldnAhnRg5Pw/p.png" alt="file-list" width="85%"/>
+    <img src="https://imgur.com/oPFSGjt.png" alt="file-list" width="85%"/>
 </p>
 
 
@@ -103,7 +102,7 @@ Info：檔案的資訊，包括更改縮略圖及添加標籤。可以透過逗�
 可以同時使用檔案名稱和標籤進行搜尋。
 
 <p align="center" width="100%">
-    <img src="https://uc323d3b75a38f1eb55aa24606d5.previews.dropboxusercontent.com/p/thumb/ABmc0DHd3GWr39K8Q1fFBs0issfFtT115Pvtgw7pVg_KbfsRLnMyrifKN2xODIXJagtdUydYgd15k06_SmOsk4bhOYbZ3A29CBKFpABPzb16tBvXq-AVJ9pZNhILw9IpSLWTntmHJ2GzHEKUP2CG-3sLmLy2UCgXWYIzBbQCCOuWeI7CeHlgRmQPIL2CZwuNz2FQ0XrTVJAOLBjaamckfsvL0K6hG5Eko2VoSUDbx24qhhMum87WufJSEeGhJ4CVxfrODxyds57-_0DGqaYStETttS6z5cysxmfGzm8P8UqoajRTvmzwNZThatPUvLU9KmfwS5KDo0dK5m4txeRJv3xeHjv0vtTx62Wj_j4qGLxMnqcDL0lZgKi1mED1hJgu9Wj2O-NAhNjTveKkLJ6vtu39cUck3aNfXXk4tVmlAbAB2A/p.png" alt="search" width="85%"/>
+    <img src="https://imgur.com/v2qoGAx.png" alt="search" width="85%"/>
 </p>
 
 
