@@ -4,7 +4,7 @@ File Tag Manager 是 Windows 上的標籤管理程式，為檔案添加標籤後
 
 > 使用 Mvvm 架構實現關注點分離，並透過依賴注入解決類別間高耦合的問題。
 >
-> 資料庫為 Sqlite，使用 Dapper ORM 和 Unit of Work 模式進行資料庫的存取。Tag 表用 Toxi solution 設計。搜尋使用全文檢索 (fts5) 加快搜尋速度。
+> 資料庫為 Sqlite，使用 Dapper ORM 和 Unit of Work 模式進行資料庫的存取。搜尋使用全文檢索 (fts5) 加快搜尋速度。
 >
 > 測試使用 NUnit 和 moq mock 框架。
 
@@ -74,7 +74,7 @@ File Tree
 
 ## Init
 
-選擇目標文件夾。
+選擇目標資料夾。
 
 <p align="center" width="100%">
     <img src="https://imgur.com/jAztUaQ.png" alt="select-directory" width="85%"/>
