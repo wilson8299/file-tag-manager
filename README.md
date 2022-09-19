@@ -40,7 +40,7 @@ File Tag Manager 是 Windows 上的標籤管理程式，為檔案添加標籤後
 
 
 
-## Usage
+## Download
 
 Download win-x64：[![](https://img.shields.io/badge/Release-v1.0.0.0-blue.svg?style=for-the-badge)](https://github.com/wilson8299/file-tag-manager/releases/tag/v1.0.0.0)
 
