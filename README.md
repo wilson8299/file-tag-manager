@@ -16,7 +16,7 @@ File Tag Manager 是 Windows 上的標籤管理程式，為檔案添加標籤後
 ## Table of contents
 
 - [Built With](#built-with)
-- [Usage](#usage)
+- [Download](#download)
 - [Structure](#structure)
 - [Init](#init)
 - [File list](#file-list)
